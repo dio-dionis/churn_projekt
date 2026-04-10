@@ -1,96 +1,97 @@
 # 📊 Customer Churn Prediction
 
-## 📌 Опис проєкту
-Цей проєкт присвячений прогнозуванню відтоку клієнтів (Churn) телекомунікаційної компанії за допомогою методів машинного навчання.
+## 📌 Project Description
+This project focuses on predicting customer churn in a telecommunications company using machine learning techniques.
 
-Мета — визначити ймовірність того, що клієнт припинить користуватись послугами.
-
----
-
-## 📁 Структура проєкту
-
-churn_project/
-│
-├── data/ # датасет
-├── models/ # збережені моделі
-├── src/
-│ ├── train.py # навчання моделей
-│ ├── evaluate.py # оцінка моделей
-│
-├── notebooks/
-│ └── eda.ipynb # аналіз даних
-│
-├── app.py # Streamlit додаток
-├── requirements.txt
-├── Dockerfile
-├── README.md
-└── .gitignore
+The goal is to determine the probability that a customer will stop using the service.
 
 ---
 
-## 📊 Аналіз даних (EDA)
-Було виконано:
-- аналіз розподілів
-- перевірка пропущених значень
-- аналіз кореляцій
+## 📁 Project Structure
+
+churn_project/  
+│  
+├── data/ # dataset  
+├── models/ # saved models  
+├── src/  
+│ ├── train.py # model training  
+│ ├── evaluate.py # model evaluation  
+│  
+├── notebooks/  
+│ └── eda.ipynb # exploratory data analysis  
+│  
+├── app.py # Streamlit application  
+├── requirements.txt  
+├── Dockerfile  
+├── README.md  
+└── .gitignore  
 
 ---
 
-## 🤖 Моделі
+## 📊 Exploratory Data Analysis (EDA)
 
-Було використано:
-- Logistic Regression
-- Random Forest
-
-### 📈 Результати:
-
-| Модель               | Accuracy | F1-score |
-|--------------------|----------|---------|
-| Logistic Regression | 0.82     | 0.84    |
-| Random Forest       | 0.94     | 0.95    |
-
-✅ Random Forest показала найкращий результат
+The following steps were performed:
+- distribution analysis  
+- missing values check  
+- correlation analysis  
 
 ---
 
-## 📉 Метрики
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
+## 🤖 Models
+
+The following models were used:
+- Logistic Regression  
+- Random Forest  
+
+### 📈 Results:
+
+| Model               | Accuracy | F1-score |
+|--------------------|----------|----------|
+| Logistic Regression | 0.82     | 0.84     |
+| Random Forest       | 0.94     | 0.95     |
+
+✅ Random Forest achieved the best performance
 
 ---
 
-## 🌐 Веб-додаток
-
-Реалізовано за допомогою Streamlit.
-
-Функціонал:
-- введення даних клієнта
-- прогноз відтоку
-- відображення ймовірності
+## 📉 Metrics
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+- ROC-AUC  
 
 ---
 
-## ▶️ Запуск проєкту
+## 🌐 Web Application
 
-### 1. Встановлення залежностей
+Implemented using Streamlit.
+
+Features:
+- user input for customer data  
+- churn prediction  
+- probability visualization  
+
+---
+
+## ▶️ How to Run
+
+### 1. Install dependencies
 
 pip install -r requirements.txt
 
 
-### 2. Навчання моделі
+### 2. Train the model
 
 python src/train.py
 
 
-### 3. Оцінка
+### 3. Evaluate the model
 
 python src/evaluate.py
 
 
-### 4. Запуск веб-додатку
+### 4. Run the web app
 
 streamlit run app.py
 
@@ -99,26 +100,26 @@ streamlit run app.py
 
 ## 🐳 Docker
 
-### Збірка:
+### Build image:
 
 docker build -t churn-app .
 
 
-### Запуск:
+### Run container:
 
 docker run -p 8501:8501 churn-app
 
 
 ---
 
-## 📌 Висновок
+## 📌 Conclusion
 
-Було побудовано модель прогнозування відтоку клієнтів.
+A customer churn prediction model was successfully developed.
 
-Random Forest показала найкращі результати та була використана у фінальному додатку.
+Random Forest showed the best performance and was used in the final application.
 
-Проєкт включає повний pipeline:
-- обробка даних
-- навчання
-- оцінка
-- інтеграція у веб-додаток
+The project includes a full pipeline:
+- data preprocessing
+- model training
+- evaluation
+- integration into a web application
